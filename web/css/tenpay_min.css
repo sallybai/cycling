@@ -1,0 +1,285 @@
+
+body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,select,textarea,button,th,td,blockquote,address,pre{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6,input,textarea,select,button,label{font-size:100%;vertical-align:middle;}
+ul,dl,ol{list-style:none;}
+img,fieldset{border:none;}
+img{display:inline-block;overflow:hidden;vertical-align:top;}
+em,address{font-style:normal;}
+sup,sub{vertical-align:baseline;}
+table{border-collapse:collapse;border-spacing:0;}
+q:before{content:"";}
+q:after{content:"";}
+button{cursor:pointer;}
+textarea{word-wrap:break-word;resize:none;}	/*	word-wrap for opera, resize for webkit	*/
+input::-ms-clear{display:none;}	/*	Remove X button in input for IE10	*/
+
+::-webkit-scrollbar{width:12px;height:0;background:0}
+::-webkit-scrollbar-track{border-width:6px 0}
+::-webkit-scrollbar-button:start{display: none;}
+::-webkit-scrollbar-button:end{display: none;}
+::-webkit-scrollbar-thumb:vertical{-webkit-border-image:url(https://www.tenpay.com/v3/res/tenpay_v3/img/global/tenpay_scrollbar_normal.png?v=20151126) 6 0 6 0 repeat repeat;border-width:6px 0}
+::-webkit-scrollbar-thumb:vertical:hover{-webkit-border-image:url(https://www.tenpay.com/v3/res/tenpay_v3/img/global/tenpay_scrollbar_hover.png?v=20151126) 6 0 6 0 repeat repeat;border-width:6px 0}
+
+/* HTML5 [[ */
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block;}
+menu{margin:0;padding:0;}
+mark{background-color:transparent;}
+/* HTML5 ]] */
+
+/* ============================================================
+	 字体样式
+	 ============================================================ */
+
+body{background-color:#f8f8f8;color:#3a3d42;font:14px/1.5 Tahoma, Helvetica, Arial, "Microsoft YaHei", SimSun;*font-family:"Microsoft YaHei"}	/* 微软雅黑*/
+legend, button, select, textarea, input{color:#3a3d42;font-family: Tahoma, Helvetica, Arial, "Microsoft YaHei", SimSun;*font-family:"Microsoft YaHei"}
+button{min-width:68px;min-width:52px\9;*min-width:auto;height:24px;padding:0 5px 1px;*padding:0 10px 1px;}
+a{color:#00b1ee;text-decoration:none;}
+a:hover{color:#6cd9ff;}
+a:focus{outline:none;}
+input {}
+input:focus {border: 1px solid #1FC8F9;outline:none;}
+.font-12{font-size:12px;}														/* 12像素字 */
+.font-14{font-size:14px;}														/* 14像素字 */
+.highlight{color:#f63;}															/* 高亮显示(橙色) */
+.money{color:#f63;font-weight:700;}												/* 金额高亮显示 */
+.gray-links a{color:#999999;}													/* 灰色链接列表 */
+.gray-links a:hover{color:#0078B6;}
+.dark-gray-links a{color:#666666;}												/* 深灰色链接列表 */
+.dark-gray-links a:hover{color:#0078B6;}
+.gray{color:#999;}																/* 灰色字或单个链接 */
+a.gray:hover{color:#0078B6;}
+.dark-gray{color:#666;}															/* 深灰色 */
+a.dark-gray:hover{color:#0078B6;}
+.light-gray{color:#ccc;}														/* 浅灰色 */
+.black{color:#333;}																/* 黑色 */
+.red{color:#e20000 !important;}																/* 红色 */
+.orange {color: #ff8401 !important;}
+.bold{font-weight:700;}															/* 粗体 */
+.italic{font-style:italic;}														/* 斜体 */
+.line-through{text-decoration:line-through;}									/* 贯穿线 */
+
+
+/* ============================================================
+	 布局
+	 ============================================================ */
+
+.container:after, .col-wrap:after{display:block;visibility:hidden;height:0;content:".";clear:both;}
+.container, .col-wrap{zoom:1;}
+.header, .container, .footer{margin:0 auto;}
+
+.col-l, .col-m, .col-inner-l, .col-inner-m{display:inline;float:left;width:auto;}
+.col-r, .col-inner-r{display:inline;float:right;width:auto;}
+
+.clearfix:after{content:".";clear:both;display:block;height:0;visibility:hidden;}
+.clearfix{zoom:1;}
+
+/* 指针手形 */
+.pointer{cursor:pointer;}
+
+/* 隐藏/显示 */
+html .hide{display:none;}
+html .show{display:block;}
+html .hidden{position:absolute;top:-9999px;left:-9999px;}
+html .visible{position:static;}
+html .v-hidden{visibility:hidden;}
+html .v-visible{visibility:visible;}
+
+.i-hide{display:none!important;}
+.i-hidden{position:absolute!important;width:0!important;height:0!important;line-height:0!important;overflow:hidden!important;}
+
+
+/* 浮动 */
+html .float-l{float:left;width:auto;}
+html .float-r{float:right;width:auto;}
+
+/* 文本对齐 */
+html .align-l{text-align:left;}
+html .align-c{text-align:center;}
+html .align-r{text-align:right;}
+html .align-t{vertical-align:top;}
+html .align-m{vertical-align:middle;}
+html .align-b{vertical-align:bottom;}
+
+/* 定位 */
+html .relative{position:relative;}
+html .absolute{position:absolute;}
+
+/* 溢出处理 */
+html .overflow-hidden{overflow:hidden;}
+
+/*
+		功能： 提高层叠级别
+		用法： 弹出层、浮层等需要提高层叠级别的地方给主容器加以下class, 默认用high-layer, 不要用highest-layer, 如遇多个层层叠时, 再使用higher-layer和highest-layer提高层叠级别
+ */
+html .high-layer{z-index:997;}		/* 层叠级别 ： 高 */
+html .higher-layer{z-index:998;}	/* 层叠级别 ： 更高 */
+html .highest-layer{z-index:999;} 	/* 层叠级别 ： 最高 */
+
+/*
+		功能： 隐藏控件
+		用法： 弹出层需要遮蔽弹出层外的select或密码控件时给body添加class "hide-ctrl", 弹出层内的密码控件不隐藏
+*/
+.hide-ctrl select, .hide-ctrl object, .hide-ctrl embed{visibility:hidden;}
+.hide-ctrl .box select, .hide-ctrl .box object, .hide-ctrl .box embed{visibility:visible;}
+
+/*
+		功能： 显示控件
+		用法： 弹出层需要显示弹出层内的select或密码控件时，给弹出层内容的主容器添加class "show-ctrl"
+*/
+.show-ctrl select, .show-ctrl object, .show-ctrl embed{visibility:visible;}
+.show-ctrl .box select, .show-ctrl .box object, .show-ctrl .box embed{visibility:visible;}
+
+/*
+		功能： 单独隐藏选择框、密码控件
+*/
+.hide-select select, .hide-object object, .hide-object embed{visibility:hidden;}
+
+
+/*
+		功能： loading时隐藏某些元素并显示loading图标
+		用法： 给loading图标的父级节点添加class "loading"
+*/
+.loading .loading-hide{display:none;}
+.loading .loading-hidden{position:absolute;top:-9999px;left:-9999px;}
+.loading .ico-loading-16{display:inline-block;position:static;}
+.loading .ico-loading-32{display:block;position:static;}
+
+
+/*
+		功能： 交互触发时(click、change等)显示某些元素
+		用法： 给事件目标的父级节点添加class "trigger"
+*/
+.trigger .trigger-hide, .trigger-show{display:none;}
+.trigger .trigger-show{display:block;}
+.trigger .trigger-inline{display:inline;}
+.trigger .trigger-hidden, .trigger-visible{position:absolute;top:-9999px;left:-9999px;}
+.trigger .trigger-visible{position:static;}
+
+
+.arrow:hover {
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    opacity: 1;
+}
+.arrow{
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    line-height: 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-bottom: 15px solid rgba(45, 188, 87,0.8);
+    border-right: 15px solid rgba(45, 188, 87,0.8);
+    border-left: 15px solid rgba(255,255, 255,0);
+    border-top: 15px solid rgba(255,255, 255,0);
+    position: absolute;
+    top: 70px;
+    left: 136px;
+    -webkit-animation: opener .5s ease-in-out alternate infinite;
+    animation: opener .5s ease-in-out alternate infinite;
+    cursor: pointer;
+    -webkit-transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+    transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+}
+
+.arrow.white{
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    line-height: 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-bottom: 15px solid rgba(255,255, 255,1);
+    border-right: 15px solid rgba(255,255, 255,1);
+    border-left: 15px solid rgba(76, 216, 117,0);
+    border-top: 15px solid rgba(76, 216, 117,0);
+    position: absolute;
+    top: 70px;
+    left: 136px;
+    -webkit-animation: opener .5s ease-in-out alternate infinite;
+    animation: opener .5s ease-in-out alternate infinite;
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+    transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+}
+@-webkit-keyframes opener {
+    100% {
+        top: 65px
+    }
+}
+@keyframes opener {
+    100% {
+        top: 65px
+    }
+}
+
+.pg .arrow.white{margin-left:-15px;}
+.pg-2 .arrow.white{left:50%;}
+.pg-3 .arrow.white{left:50%;margin-top:590px;}
+.pg-4 .arrow.white{left:50%;margin-top:590px;}
+
+/* 
+	sally#dbf7e3;
+*/
+.main{background-color:#ffffff;}
+.content{margin:0 auto;}
+.con{position:relative;z-index:100;}
+.pg .flow{position:relative;top:-417px;height:230px;}
+.pg .flow > li{position:absolute;display:inline-block;}
+.pg .flow .gray:before{display:block;content:"";position:absolute;width:100%;height:100%;}
+.pg .flow .rect:before{background-color:rgba(238,236,237,0.7);background-image:none;border-radius:6px;}
+
+
+
+
+.pg-1 {
+  background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(76, 216, 117) 100%);
+  background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+}
+.pg-2,.pg-3,.pg-4{background-color:#4cd875;width:100%;}
+.pg-2 img{margin:0 auto;}
+.pg-2 img,.pg-3 img,.pg-4 img{margin-top: -30px;}
+
+.pg-5,.pg-6,.pg-7{width:1410px; margin:0 auto;}
+.pg-5 .arrow{margin-top:-60px;}
+.pg-5 .flow > .li-2.gray:before{background-image:url(../img/2_2_h.png);background-size:100% auto;}
+.pg-5 .flow > .li-3.gray:before{background-image:url(../img/2_3_h.png);background-size:100% auto;}
+.pg-5 .flow > .li-5.gray:before{background-image:url(../img/2_5_h.png);background-size:100% auto;}
+
+.pg-5 .flow > .li-1{top:-30px;left:0px;}
+.pg-5 .flow > .li-2{top:355px;left:0px;}
+.pg-5 .flow > .li-3{top:448px;left:307px;}
+.pg-5 .flow > .li-4{top:455px;left:552px;}
+.pg-5 .flow > .li-5{top:445px;left:780px;}
+.pg-5 .flow > .li-6{top:-70px;left:1145px;}
+
+.pg-6 .arrow{margin-top:-40px;}
+
+.pg-6{background-size:300px auto;}
+.pg-6 .flow-3{top:-370px;}
+.pg-6 .flow > .li-1.gray:before{background-image:url(../img/3_1_h.png);background-size:100% auto;}
+.pg-6 .flow > .li-3.gray:before{background-image:url(../img/3_3_h.png);background-size:100% auto;}
+.pg-6 .flow > .li-4.gray:before{background-image:url(../img/3_4_h.png);background-size:100% auto;}
+
+.pg-6 .flow > .li-1{top:-50px;left:0px;}
+.pg-6 .flow > .li-2{top:330px;left:0px;}
+.pg-6 .flow > .li-3{top:384px;left:310px;}
+.pg-6 .flow > .li-4{top:140px;left:1134px;}
+
+
+.pg-7 .arrow{margin-top:20px;}
+.pg-7 .flow > .li-1.gray:before{background-image:url(../img/4_1_h.png);background-size:100% auto;}
+.pg-7 .flow > .li-2.gray:before{background-image:url(../img/4_2_h.png);background-size:100% auto;}
+.pg-7 .flow > .li-3.gray:before{background-image:url(../img/4_3_h.png);background-size:100% auto;}
+
+.pg-7 .flow-4{top:-340px;}
+.pg-7 .flow > .li-1{top:-26px;left:0px;}
+.pg-7 .flow > .li-2{top:358px;left:310px;}
+.pg-7 .flow > .li-3{top:110px;left:854px;}
+

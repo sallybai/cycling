@@ -1,0 +1,49 @@
+old_id,current_id,counter_name,no_of_channels,channel_1_direction,channel_2_direction,channel_3_direction,channel_4_direction,latitude,longitude
+01,01,Peffermill Road,4,,,,,55.931077,-3.1470219
+02,02,Steadfastgate,2,WB,EB,,,55.971772,-3.1899984
+03,03,Hawkhill Avenue,4,,,,,55.963807,-3.162539
+04,04,Seafield Street,2,,,,,55.968359,-3.1468856
+05,05,Blackhall,2,,,,,55.959391,-3.246101
+06,06,Silverknowes,4,,,,,55.978805,-3.2885814
+13,07,Westercoates,2,SB,NB,,,55.9471,-3.2330639
+14,08,Forth Road Bridge,2,SB,NB,,,55.986428,-3.404146
+16,09,Queensferry - Dalmeny,2,NB,SB,,,55.981014,-3.3767231
+17,10,RBS Gogar,2,EB,WB,,,55.93668,-3.336705
+18,11,Innocent,2,WB,EB,,,55.936426,-3.1439878
+19,12,Cultins Road,2,NB,SB,,,55.928775,-3.3081701
+,13,Carrick Knowe Golf Course,2,,,,,55.94174,-3.26243
+23,14,North Edinburgh Access Rd,2,NB,SB,,,55.968416,-3.2392336
+24,15,Middle Meadow Walk,2,SB,NB,,,55.942961,-3.1914146
+,16,Spylaw Park,4,,,,,55.90659,-3.26166
+26,17,Cramond Brig,2,EB,WB,,,55.967464,-3.3207722
+29,18,Union Canal - Wester Hailes,2,WB,EB,,,55.917496,-3.2809768
+31,19,Portobello Prom (West),4,SB,NB,SB,NB,55.956753,-3.1158841
+,20,Portobello Prom (East),2,SB,NB,,,55.95441162,-3.109363689
+,21,Morrison Street,2,,,,,55.94588313,-3.208828314
+,22,North Meadow Walk East 1,2,,,,,55.94151365,-3.185044569
+,23,North Meadow Walk East 2,2,,,,,55.94140647,-3.184977253
+,24,Roseburn Park,2,,,,,55.94492572,-3.241847326
+,25,Straiton Path,2,,,,,55.89404326,-3.133513286
+,26,Stenhouse Drive,2,,,,,55.93322315,-3.269501595
+22,27,Harrison Park,2,EB,WB,,,55.93427477,-3.224202212
+25,28,Rodney Street Tunnel,2,NB,SB,NB,SB,55.96328587,-3.19708389
+,29,Corstorphine Road,2,,,,,55.94582069,-3.240418843
+,30,Dalry Road,2,,,,,55.94081498,-3.224328505
+,31,Dundee Street,2,,,,,55.94111851,-3.216364876
+,32,Inverleith Row,2,,,,,55.96338227,-3.201027689
+,33,London Road,2,,,,,55.95521954,-3.152518118
+,34,Nicolson Street,2,,,,,55.94692414,-3.18585036
+,35,Queensferry Road,2,,,,,55.9537229,-3.214774237
+,36,Raeburn Place,2,,,,,55.95887299,-3.210066181
+,37,Whitehouse Loan,2,,,,,55.93161994,-3.19996464
+,38,Bruntsfield Place - North Side,2,,,,,55.93616664,-3.209149959
+,39,Bruntsfield Place - South Side,2,,,,,55.93602386,-3.20904946
+,40,Mayfield Road - Northbound,2,,,,,55.93001134,-3.175762155
+,41,Mayfield Road - Southbound,2,,,,,55.93000098,-3.175905893
+,42,Melville Drive - Main,2,,,,,55.94214301,-3.199857786
+,43,Melville Drive - Spur,2,,,,,55.94197789,-3.200204917
+,44,Melville Drive - Bus 1 (Southbound),2,,,,,55.94159584,-3.199760812
+,45,Melville Drive - Bus 2 (Northbound),2,,,,,55.94165451,-3.200194913
+,46,Fishwives Causeway,2,,,,,55.95411478,-3.126235642
+,47,Inverleith Park,2,,,,,55.96309598,-3.219200959
+,48,Crewe Road South,2,,,,,55.96129082,-3.229956878

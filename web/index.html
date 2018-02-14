@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Bicycle,Data,Behaviour,Transportation" />
+<meta name="description" content="Bicycle - Make Life Simple" />
+<meta name="page"/>
+<title>Bicycle - Make Life Simple</title>
+<link href="css/tenpay_min.css?v=20160825" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="css/examples.css" />
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+       <script type="text/javascript" src="js/echarts-all-3.js"></script>
+	   <script type="text/javascript" src="js/ecStat.min.js"></script>
+	   <script type="text/javascript" src="js/dataTool.min.js"></script>
+	   <script type="text/javascript" src="js/china.js"></script>
+	   <script type="text/javascript" src="js/world.js"></script>
+	   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+	   <script type="text/javascript" src="js/bmap.min.js"></script>
+       <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript" src="js/scrolloverflow.js"></script>
+
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="js/examples.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    css3: true
+                });
+            });
+        </script>
+<script type="text/javascript">
+$(function(){
+
+    $('li').addClass('gray');
+    $('.pg .li-1').removeClass('gray');
+    $('.pg-5 li').click(function(){
+        $('.pg-5 li').addClass('gray');
+        $(this).removeClass('gray');
+    })
+    $('.pg-6 li').click(function(){
+        $('.pg-6 li').addClass('gray');
+        $(this).removeClass('gray');
+    })
+    $('.pg-7 li').click(function(){
+        $('.pg-7 li').addClass('gray');
+        $(this).removeClass('gray');
+    })
+    $('.pg-5 .li-1').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "0px", marginTop : "-60px" } );
+    })
+    $('.pg-5 .li-2').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "0px", marginTop : "330px" } );
+    })
+    $('.pg-5 .li-3').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "270px", marginTop : "420px" } );
+    })
+    $('.pg-5 .li-4').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "510px", marginTop : "420px" } );
+    })
+    $('.pg-5 .li-5').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "910px", marginTop : "420px" } );
+    })
+    $('.pg-5 .li-6').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "1130px", marginTop : "-110px" } );
+    })
+    $('.pg-6 .li-1').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "0px", marginTop : "-40px" } );
+    })
+    $('.pg-6 .li-2').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "0px", marginTop : "350px" } );
+    })
+    $('.pg-6 .li-3').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "560px", marginTop : "410px" } );
+    })
+    $('.pg-6 .li-4').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "1110px", marginTop : "153px" } );
+    })
+    $('.pg-7 .li-1').click(function(){
+        $('.pg-7 .arrow').css( { marginLeft : "0px", marginTop : "20px" } );
+    })
+    $('.pg-7 .li-2').click(function(){
+        $('.pg-7 .arrow').css( { marginLeft : "410px", marginTop : "410px" } );
+    })
+    $('.pg-7 .li-3').click(function(){
+        $('.pg-7 .arrow').css( { marginLeft : "1110px", marginTop : "150px" } );
+    })
+});
+
+</script>
+</head>
+<body class="main">
+<!-- content [[ -->
+<div class="content" role="main" id="fullpage">
+	<div class="pg pg-1 section hide" id="section0">
+        <canvas class="canvas"></canvas>
+
+        <div class="help">?</div> 
+
+        <div class="ui">
+          <input class="ui-input" type="text" />
+          <span class="ui-return">↵</span>
+        </div>
+
+        <div class="overlay">
+          <div class="tabs">
+            <div class="tabs-labels"><span class="tabs-label">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+
+            <div class="tabs-panels">
+              <ul class="tabs-panel commands">
+                <li class="commands-item"><span class="commands-item-title">Text</span><span class="commands-item-info" data-demo="Hello :)">Type anything</span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Countdown</span><span class="commands-item-info" data-demo="#countdown 10">#countdown<span class="commands-item-mode">number</span></span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Time</span><span class="commands-item-info" data-demo="#time">#time</span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Rectangle</span><span class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span class="commands-item-mode">width x height</span></span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Circle</span><span class="commands-item-info" data-demo="#circle 25">#circle<span class="commands-item-mode">diameter</span></span><span class="commands-item-action">Demo</span></li>
+
+                <li class="commands-item commands-item--gap"><span class="commands-item-title">Animate</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode">command1</span>&nbsp;|<span class="commands-item-mode">command2</span></span><span class="commands-item-action">Demo</span></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+	</div>
+    <div class="pg pg-2 section hide" id="section1">
+        <a href="#none" class="arrow white"></a>
+        <img src="img/pg_2.png" width="800" height="auto" alt="">
+    </div>
+    <div class="pg pg-3 section hide" id="section2">
+        <img src="img/pg_3.png" width="800" height="auto" alt="">
+        <a href="#none" class="arrow white"></a>
+    </div>
+    <div class="pg pg-4 section hide" id="section3">
+        <img src="img/pg_4.png" width="460" height="auto" alt="">
+        <a href="#none" class="arrow white"></a>
+    </div>
+    <div class="pg pg-5  section hid" id="section4">
+        <div id="container" class="con" style="height:500px;width:900px;left:254px;top:24px;"></div>
+		<ol class="flow flow-2">
+			<li class="li-1 rect"><img src="gif/2_1.gif" width="284" height="auto" alt=""></li>
+			<li class="li-2"><img src="gif/2_2.gif" width="317" height="auto" alt=""></li>
+			<li class="li-3"><img src="gif/2_3.gif" width="223" height="auto" alt=""></li>
+			<li class="li-4 rect"><img src="gif/2_4.gif" width="210" height="auto" alt=""></li>
+			<li class="li-5"><img src="gif/2_5.gif" width="623" height="auto" alt=""></li>
+			<li class="li-6 rect"><img src="gif/2_6.gif" width="260" height="auto" alt=""></li>
+		</ol>
+		<a href="#none" class="arrow"></a>
+	</div>
+	<div class="pg pg-6 section hie" id="section5">
+        <div id="container-1" class="con" style="height:500px;width:900px;left:254px;top:24px;"></div>
+		<ol class="flow flow-3">
+			<li class="li-1"><img src="gif/3_1.gif" width="283" height="auto" alt=""></li>
+			<li class="li-2 rect"><img src="gif/3_2.gif" width="283" height="auto" alt=""></li>
+			<li class="li-3"><img src="gif/3_3.gif" width="795" height="auto" alt=""></li>
+			<li class="li-4"><img src="gif/3_4.gif" width="270" height="auto" alt=""></li>
+		</ol>
+        <a href="#none" class="arrow"></a>
+			
+	</div>
+	<div class="pg pg-7 section" id="section6">
+        <div id="container-2" class="con" style="height:500px;width:900px;left:254px;top:24px;"></div>
+        <ol class="flow flow-4">
+            <li class="li-1"><img src="gif/4_1.gif" width="308" height="auto" alt=""></li>
+            <li class="li-2"><img src="gif/4_2.gif" width="520" height="auto" alt=""></li>
+            <li class="li-3"><img src="gif/4_3.gif" width="553" height="auto" alt=""></li>
+        </ol>
+        <a href="#none" class="arrow"></a>
+            
+	</div>
+</div>
+<!-- content ]] -->
+
+<script type="text/javascript">
+//2015 9 17
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+	title: {
+		text: '            2015-09-17',
+		subtext: '                  Hour-based bike amount'
+	},
+	tooltip: {
+		trigger: 'axis'
+	},
+	legend: {
+		data:['Corstorphine Road','Melville Drive Main']
+	},
+	toolbox: {
+		show: true,
+		feature: {
+			dataZoom: {
+				yAxisIndex: 'none'
+			},
+			dataView: {readOnly: false},
+			magicType: {type: ['line', 'bar']},
+			restore: {},
+			saveAsImage: {}
+		}
+	},
+	xAxis:  {
+		type: 'category',
+		boundaryGap: false,
+		data: [' ','1am','2am','3am','4am','5am','6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm','9pm','10pm','11pm']
+	},
+	yAxis: {
+		type: 'value',
+		axisLabel: {
+			formatter: '{value}'
+		}
+	},
+	series: [
+		{
+			name:'Corstorphine Road',
+			type:'line',
+			data:[2,2,0,0,0,1,9,37,56,16,3,3,8,12,11,11,21,52,26,14,3,5,8,3],
+			markPoint: {
+				data: [
+					{type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
+				]
+			}/*,
+			markLine: {
+				data: [
+					{type: 'average', name: 'Average'}
+				]
+			}*/
+		},
+		{
+			name:'Melville Drive Main',
+			type:'line',
+			data:[10,3,3,1,1,1,19,59,176,108,51,47,61,65,58,53,114,177,115,65,52,26,19,19],
+			markPoint: {
+				data: [
+                    {type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
+				]
+			}/*,
+			markLine: {
+				data: [
+					{type: 'average', name: 'Average'},
+					[{
+						symbol: 'none',
+						x: '90%',
+						yAxis: 'max'
+					}, {
+						symbol: 'circle',
+						label: {
+							normal: {
+								position: 'start',
+								formatter: 'Max'
+							}
+						},
+						type: 'max',
+						name: 'Max'
+					}]
+				]
+			}*/
+		}
+	]
+};
+;
+
+
+var dom1 = document.getElementById("container-1");
+var myChart1 = echarts.init(dom1);
+var app1 = {};
+option1 = null;
+option1 = {
+    title: {
+        text: '           2015-04-05 ~ 2015-04-25',
+        subtext: '                Day-based bike amount'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['Corstorphine Road','Melville Drive Main']
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    xAxis:  {
+        type: 'category',
+        boundaryGap: false,
+        data: [' ','4/6 Mon','4/7 Tue','4/8 Wed','4/9 Thu','4/10 Fri','4/11 Sat','4/12 Sun','4/13 Mon','4/14 Tue','4/15 Wed','4/16 Thu','4/17 Fri','4/18 Sat','4/19 Sun','4/20 Mon','4/21 Tue','4/22 Wed','4/23 Thu','4/24 Fri','4/25 Sat']
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}'
+        }
+    },
+    series: [
+        {
+            name:'Corstorphine Road',
+            type:'line',
+            data:[99,177,247,283,224,215,64,59,286,266,273,218,156,82,67,337,366,387,329,313,96],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'}
+                ]
+            }*/
+        },
+        {
+            name:'Melville Drive Main',
+            type:'line',
+            data:[614,848,937,1144,1173,1017,502,448,944,954,1031,1238,1019,815,599,1189,1502,1530,1554,1223,999],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'},
+                    [{
+                        symbol: 'none',
+                        x: '90%',
+                        yAxis: 'max'
+                    }, {
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                position: 'start',
+                                formatter: 'Max'
+                            }
+                        },
+                        type: 'max',
+                        name: 'Max'
+                    }]
+                ]
+            }*/
+        }
+    ]
+};
+;
+var dom2 = document.getElementById("container-2");
+var myChart2 = echarts.init(dom2);
+var app2 = {};
+option2 = null;
+option2 = {
+    title: {
+        text: '           2015-03-22 ~ 2016-06-18',
+        subtext: '                Day-based bike amount'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['Corstorphine Road','Melville Drive Main']
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    xAxis:  {
+        type: 'category',
+        boundaryGap: false,
+        data: ['22/3/2015','23/3/2015','24/3/2015','25/3/2015','26/3/2015','27/3/2015','28/3/2015','5/4/2015','6/4/2015','7/4/2015','8/4/2015','9/4/2015','10/4/2015','11/4/2015','12/4/2015','13/4/2015','14/4/2015','15/4/2015','16/4/2015','17/4/2015','18/4/2015','19/4/2015','20/4/2015','21/4/2015','22/4/2015','23/4/2015','24/4/2015','25/4/2015','26/4/2015','27/4/2015','28/4/2015','29/4/2015','30/4/2015','1/5/2015','2/5/2015','3/5/2015','4/5/2015','5/5/2015','6/5/2015','7/5/2015','8/5/2015','9/5/2015','10/5/2015','11/5/2015','12/5/2015','13/5/2015','14/5/2015','15/5/2015','16/5/2015','17/5/2015','18/5/2015','19/5/2015','20/5/2015','21/5/2015','22/5/2015','23/5/2015','24/5/2015','25/5/2015','26/5/2015','27/5/2015','28/5/2015','29/5/2015','30/5/2015','31/5/2015','1/6/2015','2/6/2015','3/6/2015','4/6/2015','5/6/2015','6/6/2015','7/6/2015','8/6/2015','9/6/2015','10/6/2015','11/6/2015','12/6/2015','13/6/2015','14/6/2015','15/6/2015','16/6/2015','17/6/2015','18/6/2015','19/6/2015','20/6/2015','21/6/2015','22/6/2015','23/6/2015','24/6/2015','25/6/2015','26/6/2015','27/6/2015','28/6/2015','29/6/2015','30/6/2015','1/7/2015','2/7/2015','3/7/2015','4/7/2015','5/7/2015','6/7/2015','7/7/2015','8/7/2015','9/7/2015','10/7/2015','11/7/2015','12/7/2015','13/7/2015','14/7/2015','15/7/2015','16/7/2015','17/7/2015','18/7/2015','19/7/2015','20/7/2015','21/7/2015','22/7/2015','23/7/2015','24/7/2015','25/7/2015','26/7/2015','27/7/2015','28/7/2015','29/7/2015','30/7/2015','31/7/2015','1/8/2015','2/8/2015','3/8/2015','4/8/2015','5/8/2015','6/8/2015','7/8/2015','8/8/2015','9/8/2015','10/8/2015','11/8/2015','12/8/2015','13/8/2015','14/8/2015','15/8/2015','16/8/2015','17/8/2015','18/8/2015','19/8/2015','20/8/2015','21/8/2015','22/8/2015','23/8/2015','24/8/2015','25/8/2015','26/8/2015','27/8/2015','28/8/2015','29/8/2015','30/8/2015','31/8/2015','1/9/2015','2/9/2015','3/9/2015','4/9/2015','5/9/2015','6/9/2015','7/9/2015','8/9/2015','9/9/2015','10/9/2015','11/9/2015','12/9/2015','13/9/2015','14/9/2015','15/9/2015','16/9/2015','17/9/2015','18/9/2015','19/9/2015','20/9/2015','21/9/2015','22/9/2015','23/9/2015','24/9/2015','25/9/2015','26/9/2015','27/9/2015','28/9/2015','29/9/2015','30/9/2015','1/10/2015','2/10/2015','3/10/2015','4/10/2015','5/10/2015','6/10/2015','7/10/2015','8/10/2015','9/10/2015','10/10/2015','18/10/2015','19/10/2015','20/10/2015','21/10/2015','22/10/2015','23/10/2015','24/10/2015','25/10/2015','26/10/2015','27/10/2015','28/10/2015','29/10/2015','30/10/2015','31/10/2015','1/11/2015','2/11/2015','3/11/2015','4/11/2015','5/11/2015','6/11/2015','7/11/2015','8/11/2015','9/11/2015','10/11/2015','11/11/2015','12/11/2015','13/11/2015','14/11/2015','15/11/2015','16/11/2015','17/11/2015','18/11/2015','19/11/2015','20/11/2015','21/11/2015','22/11/2015','23/11/2015','24/11/2015','25/11/2015','26/11/2015','27/11/2015','28/11/2015','29/11/2015','30/11/2015','1/12/2015','2/12/2015','3/12/2015','4/12/2015','5/12/2015','6/12/2015','7/12/2015','8/12/2015','9/12/2015','10/12/2015','11/12/2015','12/12/2015','13/12/2015','14/12/2015','15/12/2015','16/12/2015','17/12/2015','18/12/2015','19/12/2015','20/12/2015','21/12/2015','22/12/2015','23/12/2015','24/12/2015','25/12/2015','26/12/2015','27/12/2015','28/12/2015','29/12/2015','30/12/2015','31/12/2015','1/1/2016','2/1/2016','3/1/2016','4/1/2016','5/1/2016','6/1/2016','7/1/2016','8/1/2016','9/1/2016','10/1/2016','11/1/2016','12/1/2016','13/1/2016','14/1/2016','15/1/2016','16/1/2016','17/1/2016','18/1/2016','19/1/2016','20/1/2016','21/1/2016','22/1/2016','23/1/2016','24/1/2016','25/1/2016','26/1/2016','27/1/2016','28/1/2016','29/1/2016','30/1/2016','31/1/2016','1/2/2016','2/2/2016','3/2/2016','4/2/2016','5/2/2016','6/2/2016','7/2/2016','8/2/2016','9/2/2016','10/2/2016','11/2/2016','12/2/2016','13/2/2016','14/2/2016','15/2/2016','16/2/2016','17/2/2016','18/2/2016','19/2/2016','20/2/2016','21/2/2016','22/2/2016','23/2/2016','24/2/2016','25/2/2016','26/2/2016','27/2/2016','6/3/2016','7/3/2016','8/3/2016','9/3/2016','10/3/2016','11/3/2016','12/3/2016','13/3/2016','14/3/2016','15/3/2016','16/3/2016','17/3/2016','18/3/2016','19/3/2016','20/3/2016','21/3/2016','22/3/2016','23/3/2016','24/3/2016','25/3/2016','26/3/2016','27/3/2016','28/3/2016','29/3/2016','30/3/2016','31/3/2016','1/4/2016','2/4/2016','3/4/2016','4/4/2016','5/4/2016','6/4/2016','7/4/2016','8/4/2016','9/4/2016','10/4/2016','11/4/2016','12/4/2016','13/4/2016','14/4/2016','15/4/2016','16/4/2016','17/4/2016','18/4/2016','19/4/2016','20/4/2016','21/4/2016','22/4/2016','23/4/2016','24/4/2016','25/4/2016','26/4/2016','27/4/2016','28/4/2016','29/4/2016','30/4/2016','1/5/2016','2/5/2016','3/5/2016','4/5/2016','5/5/2016','6/5/2016','7/5/2016','8/5/2016','9/5/2016','10/5/2016','11/5/2016','12/5/2016','13/5/2016','14/5/2016','15/5/2016','16/5/2016','17/5/2016','18/5/2016','19/5/2016','20/5/2016','21/5/2016','22/5/2016','23/5/2016','24/5/2016','25/5/2016','26/5/2016','27/5/2016','28/5/2016','5/6/2016','6/6/2016','7/6/2016','8/6/2016','9/6/2016','10/6/2016','11/6/2016','12/6/2016','13/6/2016','14/6/2016','15/6/2016','16/6/2016','17/6/2016','18/6/2016']
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}'
+        }
+    },
+    series: [
+        {
+            name:'Corstorphine Road',
+            type:'line',
+            data:[79,330,284,299,185,221,43,99,177,247,283,224,215,64,59,286,266,273,218,156,82,67,337,366,387,329,313,96,72,228,312,269,307,220,65,39,201,236,247,363,210,115,79,333,327,407,359,327,87,84,297,356,377,308,309,137,98,276,366,318,343,251,112,58,287,228,396,348,257,74,100,401,431,443,410,338,99,86,378,364,388,381,312,123,87,341,389,334,345,280,130,75,323,390,382,380,315,89,90,349,339,267,341,233,115,85,297,364,343,351,172,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,332,419,352,414,164,119,139,429,387,379,390,314,113,136,423,411,342,371,344,141,123,337,360,391,372,317,126,644,417,390,372,399,297,79,92,304,384,375,303,255,108,97,205,372,309,287,260,96,103,351,375,385,297,237,99,81,317,299,233,286,253,116,84,263,323,225,103,128,39,49,222,239,187,205,167,64,98,356,191,150,157,148,37,31,88,181,249,174,79,24,18,115,133,122,140,127,39,38,152,175,181,143,102,29,13,121,111,127,126,87,10,41,149,159,76,97,88,32,25,133,154,135,123,91,39,46,177,139,124,75,22,14,55,52,109,48,58,21,34,42,116,180,238,175,186,50,26,231,161,196,163,142,40,21,129,157,134,120,115,52,54,207,105,158,145,47,23,28,82,99,213,212,179,58,17,234,270,240,191,165,29,57,118,129,114,174,129,38,51,240,256,218,223,205,85,63,234,278,253,251,213,79,83,251,274,234,262,228,103,105,328,310,307,260,141,56,65,134,283,273,272,217,81,76,173,211,250,260,216,110,96,349,224,216,314,255,120,103,327,429,373,354,284,162,95,362,331,318,270,173,102,114,128,337,297,362,332,109,121,409,445,394,346,316,127,103,411,436,370,298,321,118,102,381,426,387,308,196,152,141,378,450,433,376,252,113,73,336,368,316,262,219,119],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'}
+                ]
+            }*/
+        },
+        {
+            name:'Melville Drive Main',
+            type:'line',
+            data:[664,1185,1218,1240,1032,1098,396,614,848,937,1144,1173,1017,502,448,944,954,1031,1238,1019,815,599,1189,1502,1530,1554,1223,999,706,1132,1195,1053,1281,1119,593,370,1124,807,1062,1268,1132,696,588,1161,1174,1270,1174,1069,660,567,957,1168,1284,1113,1067,809,568,1210,1330,1096,1042,986,750,452,925,874,1164,1202,996,455,892,1267,1378,1486,1575,1135,601,620,1207,1199,1209,1124,1053,927,564,1028,1349,1137,1054,962,1033,596,1067,1253,1206,1179,1195,533,553,982,1055,887,1141,814,598,510,953,1135,1188,1148,775,507,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,825,1304,1359,1497,1542,848,965,915,1552,1281,1412,1537,1351,865,1119,1443,1586,1247,1280,1227,806,956,1293,1159,1194,1251,1049,656,804,1363,1234,1294,1336,1113,593,638,1068,1421,1456,1303,1149,823,627,1102,1526,1460,1356,1289,792,888,1605,1783,1761,1694,1542,854,731,1496,1385,1252,1601,1327,739,738,1396,1520,1412,1306,1224,636,832,1509,1552,1388,1410,1251,717,759,1464,1600,1282,1430,1185,480,501,966,1129,1340,1207,791,491,408,1119,1147,1046,1213,980,471,565,1127,1325,1322,1270,857,457,344,1068,841,1033,964,730,268,472,978,1038,809,884,737,470,393,892,937,963,865,750,410,307,618,428,317,196,107,51,214,246,357,189,326,214,234,271,441,577,760,675,707,331,279,1017,949,1120,1007,882,462,344,826,1152,1159,1078,872,598,471,1046,704,866,926,593,307,437,709,801,1088,1094,879,553,325,986,1061,1212,1013,892,320,464,909,748,803,860,797,346,439,1135,1209,1128,1098,973,555,540,1192,1246,1197,1268,1076,742,704,1434,1262,1269,1241,1107,815,840,1279,1386,1374,1211,1043,513,411,961,1219,1222,1168,927,563,511,713,918,1013,986,936,696,630,1128,862,884,1259,966,682,620,1240,1567,1699,1613,1281,1250,859,1366,1266,1358,1176,805,753,630,905,1414,1449,1431,1337,750,806,1638,1730,1590,1609,1316,879,841,1503,1451,1347,1261,1269,635,707,1413,1517,1332,1093,915,698,982,1435,1440,1471,1515,927,677,441,1150,1146,1078,1038,843,836],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'},
+                    [{
+                        symbol: 'none',
+                        x: '90%',
+                        yAxis: 'max'
+                    }, {
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                position: 'start',
+                                formatter: 'Max'
+                            }
+                        },
+                        type: 'max',
+                        name: 'Max'
+                    }]
+                ]
+            }*/
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+if (option1 && typeof option1 === "object") {
+    myChart1.setOption(option1, true);
+}
+if (option2 && typeof option2 === "object") {
+    myChart2.setOption(option2, true);
+}
+</script>
+<!--
+-->
+
+
+       <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
